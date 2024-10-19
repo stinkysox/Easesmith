@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Dancing+Script:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
 .header-top-section {
   background: #165315;
   font-family: "Poppins", sans-serif;
@@ -10,6 +11,13 @@
 
 .header-top-section p:nth-child(1) {
   margin-left: auto;
+}
+
+.small-close-btn {
+  display: none;
+}
+.hamburger-menu {
+  display: none;
 }
 
 .header-top-section p:nth-child(2) {
@@ -85,16 +93,109 @@
   font-size: 26px;
 }
 
+.cart-icon-container {
+  position: relative;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
 @media (max-width: 768px) {
   .header-logo img {
     height: 30px;
     margin-right: 14px;
   }
 
-  .main-header-section ul li a {
+  .main-header-section ul {
+    display: none;
+  }
+
+  .header-top-section p {
     font-size: 12px;
+  }
+
+  .small-close-btn {
+    display: block;
+  }
+
+  .small-close-btn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    background-color: tomato;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .hamburger-menu {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .hamburger-menu div {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+  }
+
+  .main-header-section ul.show-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-header-section ul li {
+    margin: 10px 0;
+  }
+
+  .main-header-section ul li a {
+    font-size: 14px;
+  }
+
+  .profile-cart-section {
+    flex-direction: column;
+  }
+
+  .header-logos {
+    font-size: 22px;
   }
 }
 
 @media (max-width: 480px) {
+  .header-logo img {
+    height: 20px;
+  }
+
+  .main-header-section ul li a {
+    font-size: 12px;
+  }
+
+  .profile-cart-section div p {
+    font-size: 10px;
+  }
+
+  .header-logos {
+    font-size: 20px;
+  }
 }

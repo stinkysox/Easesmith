@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import Search from "./components/SearchSection/Search";
 import Products from "./components/ProductsSection/Products";
 import CartModal from "./components/CartModal/CartModal";
+import Footer from "./components/Footer/Footer";
 function App() {
   const [isCartVisible, setCartVisible] = useState(false);
 
@@ -17,6 +18,7 @@ function App() {
         <Search />
         <Products />
         <CartModal isVisible={isCartVisible} onClose={closeCart} />
+        <Footer />
       </div>
     </>
   );

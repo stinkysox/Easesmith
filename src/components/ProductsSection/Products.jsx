@@ -6,6 +6,7 @@ import { AiOutlineHeart, AiFillStar } from "react-icons/ai";
 import { BsCartDash, BsWhatsapp } from "react-icons/bs";
 import Modal from "../ThankYouModal/ThankYou";
 import { CartContext } from "../../CartContext/Context";
+import { motion } from "framer-motion";
 
 const filterCategories = [
   "Type of Plants",
@@ -109,7 +110,6 @@ const products = [
     imageUrl:
       "https://i.postimg.cc/bYBytrdL/daa994fdb511faa82ea79a5ef58fbb1a.png",
   },
-  // Add more products with unique IDs and the same image URLs as needed.
 ];
 
 const Products = () => {
@@ -128,10 +128,15 @@ const Products = () => {
           </div>
           <ul className="filter-list">
             {filterCategories.map((category, index) => (
-              <li key={index} className="filter-item">
+              <motion.li
+                key={index}
+                className="filter-item"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
                 <span>{category}</span>
                 <IoIosAdd className="icon" />
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>
@@ -153,11 +158,21 @@ const Products = () => {
 
           <div className="grid-container">
             {products.map((product) => (
-              <div key={product.id} className="product-card">
+              <motion.div
+                key={product.id}
+                className="product-card"
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: product.id * 0.1 }} // Delayed animations
+                whileHover={{ scale: 1.05 }} // Hover scaling effect
+                whileTap={{ scale: 0.95 }} // Tap effect
+              >
                 <div className="product-image">
-                  <img
-                    src={product.imageUrl} // Use the image URL from the product object
+                  <motion.img
+                    src={product.imageUrl}
                     alt={`${product.name} image`}
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
                   />
                   <AiOutlineHeart className="wishlist-icon" />
                 </div>
@@ -180,16 +195,22 @@ const Products = () => {
                     </span>
                   </div>
                   <div className="action-buttons">
-                    <button
+                    <motion.button
                       className="add-to-cart"
+                      whileHover={{ scale: 1.1, backgroundColor: "#4CAF50" }}
                       onClick={() => addToCart(product)}
                     >
                       <BsCartDash /> Add to cart
-                    </button>
-                    <button className="buy-on-rent">Buy on Rent</button>
+                    </motion.button>
+                    <motion.button
+                      className="buy-on-rent"
+                      whileHover={{ scale: 1.1, backgroundColor: "#4CAF50" }}
+                    >
+                      Buy on Rent
+                    </motion.button>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
           <BsWhatsapp className="whatsapp-icon" />

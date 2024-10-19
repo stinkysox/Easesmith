@@ -2,7 +2,7 @@ import React from "react";
 import "./Search.css";
 import { IoMdSearch } from "react-icons/io";
 import { PiPottedPlantLight } from "react-icons/pi";
-
+import { motion } from "framer-motion";
 const images = [
   {
     imageUrl:
@@ -40,6 +40,21 @@ const images = [
   },
 ];
 
+const imageVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0 },
+};
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
 const Search = () => {
   return (
     <div className="search-main-section">
@@ -64,14 +79,24 @@ const Search = () => {
 
       <div className="search-round-images-section">
         <h2>Nursery</h2>
-        <div className="round-images-container">
+        <motion.div
+          className="round-images-container"
+          initial="hidden"
+          animate="visible"
+          variants={containerVariants}
+        >
           {images.map((item, index) => (
-            <div key={index} className="image-card">
+            <motion.div
+              key={index}
+              className="image-card"
+              variants={imageVariants}
+              whileHover={{ scale: 1.05 }} // Optional: Slight scale on hover
+            >
               <img src={item.imageUrl} alt={`Plant ${index + 1}`} />
               <p>{item.text}</p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
