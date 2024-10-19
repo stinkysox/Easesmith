@@ -1,0 +1,114 @@
+.cart-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-modal-container {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.cart-item {
+  display: flex;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: "Poppins";
+}
+
+.image-container {
+  margin-right: 20px;
+  text-align: center;
+  align-self: center;
+}
+
+.image-container img {
+  width: 100px;
+  height: auto;
+}
+
+.stars {
+  color: gold;
+}
+
+.stars svg {
+  margin-right: 3px;
+}
+
+.discounted-price {
+  color: green;
+}
+
+.delivery-info {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.delivery-info span {
+  color: green;
+  font-weight: bold;
+}
+
+.action-button button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.action-button button:hover {
+  background-color: #ddd;
+}
+
+.paras-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.paras-container :nth-child(2) {
+  color: gray;
+  text-decoration: line-through;
+}
+
+.paras-container :nth-last-child(1) {
+  color: gold;
+}
+
+.price-details {
+  margin-top: 20px;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  font-family: "Poppins";
+}
+
+.price-details h3 {
+  margin: 5px 0;
+}
+
+.price-details p {
+  margin: 5px 0;
+}

@@ -1,0 +1,276 @@
+.products-section-main-container {
+  width: 100%;
+  padding: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-section {
+  width: 40%;
+}
+
+.filter-sidebar {
+  background-color: #f0ffe3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.filter-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.filter-item:hover {
+  background-color: #eafde6;
+}
+
+.icon {
+  font-size: 18px;
+  color: #777;
+}
+
+.products-section {
+  width: 100%;
+  padding: 10px 40px;
+}
+
+.product-grid {
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.grid-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.sort-by {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sort-by select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  margin-bottom: 0px;
+}
+
+.wishlist-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.view-product-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #1d5c33;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+
+  border: none;
+}
+
+.product-details {
+  padding: 10px;
+}
+
+.product-details h3 {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.product-details p {
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #f4c150;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.discounted-price {
+  color: #1d5c33;
+  font-weight: 600;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.add-to-cart {
+  background-color: #1d5c33;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.buy-on-rent {
+  background-color: transparent;
+  border: 1px solid #1d5c33;
+  color: #1d5c33;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 40px;
+  color: #25d366;
+  cursor: pointer;
+}
+
+.view-btn {
+  background-color: #165315;
+  padding: 10px;
+  width: 100%;
+  margin: 0;
+  color: white;
+  font-family: "Poppins";
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .products-section-main-container {
+    flex-direction: column;
+  }
+
+  .filter-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+  }
+
+  .grid-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-by {
+    margin-top: 10px;
+  }
+
+  .action-buttons {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-image {
+    height: 150px;
+  }
+
+  .product-details h3 {
+    font-size: 16px;
+  }
+
+  .add-to-cart,
+  .buy-on-rent {
+    width: 100%;
+    justify-content: center;
+  }
+}

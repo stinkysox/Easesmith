@@ -1,0 +1,138 @@
+.search-main-section {
+  width: 90%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  background-color: #f5f5f5;
+  border: 2px solid #e0e0e0;
+  border-radius: 30px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  gap: 10px;
+}
+
+.search-input-container:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.search-input-container input {
+  flex-grow: 1;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  color: #333;
+}
+
+.search-input-container input::placeholder {
+  color: #999;
+}
+
+.search-input-container svg {
+  font-size: 24px;
+  color: #7c7c7c;
+  cursor: pointer;
+}
+
+.search-input-container svg:hover {
+  color: #4caf50;
+  transform: scale(1.1);
+}
+
+.search-second-container {
+  margin-top: 26px;
+}
+
+.search-second-container button {
+  width: 114px;
+  border: none;
+  padding: 10px 20px;
+  margin-right: 10px;
+  margin-bottom: 16px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-second-container button:nth-of-type(1) {
+  background-color: green;
+  color: white;
+  font-weight: bold;
+}
+
+.search-second-container button:nth-of-type(2) {
+  border: 1px solid gray;
+  background-color: transparent;
+  color: gray;
+}
+
+.search-second-container p {
+  font-family: "Poppins";
+  font-size: 16px;
+  color: #838383;
+}
+
+.search-round-images-section {
+  margin-top: 20px;
+  align-self: flex-start;
+  font-family: "Poppins";
+}
+
+.search-round-images-section h2 {
+  margin-bottom: 20px;
+}
+.round-images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 150px;
+}
+
+.image-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.image-card p {
+  font-size: 14px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .round-images-container {
+    gap: 15px;
+  }
+
+  .image-card {
+    width: 120px;
+  }
+
+  .image-card img {
+    width: 80px;
+    height: 80px;
+  }
+}
